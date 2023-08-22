@@ -26,11 +26,7 @@ void startGame(){
 
     cout << randomLetter << endl;
 
-    //string firstCard = "" + randomNumber + randomLetter; 
-
-    //cout << firstCard; 
-
-
+    
 
 
 }

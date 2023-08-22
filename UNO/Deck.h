@@ -1,16 +1,16 @@
-#ifndef player_H
-#define player_h
+#ifndef DECK_H
+#define DECK_H
 #include <iostream>
+#include <string>
 
 struct Card{
     Card(){
-        color = "";
-        number = "";
+        color = ' ';
+        num = 0;
     }
-    private:
     char color;
     int num;
-}
+};
 
 class player {
     private:
@@ -19,5 +19,5 @@ class player {
     public:
         void function();
 
-}
+};
 #endif 

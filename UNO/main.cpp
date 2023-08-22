@@ -8,7 +8,6 @@ void startGame();
 
 int main(){
     startGame();
-    GenerateRandCard();
     return 0;
 }
 
@@ -23,12 +22,13 @@ void startGame(){
 void GenerateRandCard(Card randCard){
 
     int randomNumber = rand() % 10;
-    cout << randomNumber;
-    randCard->number= randomNumber;
+    cout << random << endl;
 
-    char letters[] = "BGRY";
+    char letters[] = "bgry";
     char randomLetter = letters[rand() % 4];
+
     cout << randomLetter << endl;
-    randCard->letter = randomLetter;
+
+    string firstCard = "" + randomNumber + randomLetter; 
 
 }

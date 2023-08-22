@@ -1,4 +1,4 @@
-#include player.h
+#include "Deck.h"
 
 
 void player::function(){

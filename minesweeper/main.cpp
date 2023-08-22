@@ -16,7 +16,7 @@ void startGame(){
     cout << "Welcome to Uno!" << endl;
     cout << "Please enter the number of players: ";
     cin >> numPlayers;
-    cout << "Generating Card:" << endl;
+    cout << "Generating Board" << endl;
 
     int randomNumber = rand() % 10;
     cout << randomNumber;
@@ -25,5 +25,12 @@ void startGame(){
     char randomLetter = letters[rand() % 4];
 
     cout << randomLetter << endl;
+
+    //string firstCard = "" + randomNumber + randomLetter; 
+
+    //cout << firstCard; 
+
+
+
 
 }

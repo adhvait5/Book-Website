@@ -2,6 +2,16 @@
 #define player_h
 #include <iostream>
 
+struct Card{
+    Card(){
+        color = "";
+        number = "";
+    }
+    private:
+    char color;
+    int num;
+}
+
 class player {
     private:
         int score;
@@ -10,3 +20,4 @@ class player {
         void function();
 
 }
+#endif 

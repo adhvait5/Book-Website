@@ -4,7 +4,14 @@
 #include <cstdlib>
 #include <string>
 #include "Deck.h"
+#include "Card.h"
 
+using namespace std;
+
+Deck::Deck(){
+    firstCard.num = 0;
+    firstCard.color = ' ';
+}
 
 void Deck::GenerateRandCard(){
 

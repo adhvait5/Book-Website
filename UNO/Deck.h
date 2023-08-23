@@ -2,28 +2,24 @@
 #define DECK_H
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <string>
+//#include <cstdlib>
+//#include <string>
 
 using namespace std;
 
-struct Card{
-    Card(){
-        color = ' ';
-        num = 0;
-    }
-    char color;
-    int num;
-};
+#include "Card.h"
 
 class Deck {
     private:
         //int score;
-        Card firstCard; 
+        Card firstCard;
 
     public:
+          
+        Deck();
         void GenerateRandCard();
         void print();
 
 };
+
 #endif 

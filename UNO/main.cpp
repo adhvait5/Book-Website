@@ -12,8 +12,9 @@ void startGame();
 int main(){
     Deck temp;
     startGame();
-    temp.GenerateRandCard();
-    temp.print();
+    //temp.GenerateRandCard();
+    //temp.print();
+
     return 0;
 }
 

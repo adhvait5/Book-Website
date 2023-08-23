@@ -2,6 +2,10 @@
 #define DECK_H
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
 
 struct Card{
     Card(){
@@ -14,10 +18,12 @@ struct Card{
 
 class player {
     private:
-        int score;
+        //int score;
+        Card firstCard; 
 
     public:
-        void function();
+        void GenerateRandCard();
+        void print();
 
 };
 #endif 

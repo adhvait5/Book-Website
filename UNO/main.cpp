@@ -7,13 +7,13 @@
 using namespace std;
 
 void startGame();
-void GenerateRandCard(Card randCard);
-
+//void GenerateRandCard(Card randCard);
+player temp;
 int main(){
-    Card temp;
+    
     startGame();
-    GenerateRandCard(temp);
-    cout<<"test-> random card is: "<<temp.num<<temp.color<<endl;
+    temp.GenerateRandCard();
+    temp.print();
     return 0;
 }
 
@@ -25,15 +25,3 @@ void startGame(){
     cout << "Generating Board" << endl;
 }
 
-void GenerateRandCard(Card randCard){
-
-    int randomNumber = rand() % 10;
-    cout << randomNumber;
-    randCard.num= randomNumber;
-
-    char letters[] = "BGRY";
-    char randomLetter = letters[rand() % 4];
-
-    cout << randomLetter << endl;
-    randCard.color = randomLetter;
-}

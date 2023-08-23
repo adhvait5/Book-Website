@@ -1,7 +1,12 @@
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <string>
 #include "Deck.h"
 
 
-void player::GenerateRandCard(){
+void Deck::GenerateRandCard(){
 
     int randomNumber = rand() % 10;
     cout << randomNumber;
@@ -15,7 +20,7 @@ void player::GenerateRandCard(){
 
 }
 
-void player::print(){
+void Deck::print(){
 
     cout << firstCard.num << "" << firstCard.color << endl;
 

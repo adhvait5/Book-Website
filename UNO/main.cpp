@@ -8,9 +8,9 @@ using namespace std;
 
 void startGame();
 //void GenerateRandCard(Card randCard);
-player temp;
+
 int main(){
-    
+    Deck temp;
     startGame();
     temp.GenerateRandCard();
     temp.print();

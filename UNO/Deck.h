@@ -16,7 +16,7 @@ struct Card{
     int num;
 };
 
-class player {
+class Deck {
     private:
         //int score;
         Card firstCard; 

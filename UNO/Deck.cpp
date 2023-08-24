@@ -16,13 +16,13 @@ Deck::Deck(){
 void Deck::GenerateRandCard(){
 
     int randomNumber = rand() % 10;
-    cout << randomNumber;
+    //cout << randomNumber;
     firstCard.num= randomNumber;
 
     char letters[] = "BGRY";
     char randomLetter = letters[rand() % 4];
 
-    cout << randomLetter << endl;
+    //cout << randomLetter << endl;
     firstCard.color = randomLetter;
 
 }

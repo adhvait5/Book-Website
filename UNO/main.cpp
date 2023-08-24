@@ -9,11 +9,12 @@ using namespace std;
 void startGame();
 //void GenerateRandCard(Card randCard);
 
-int main(){
+int main() 
+{ 
     Deck temp;
     startGame();
-    //temp.GenerateRandCard();
-    //temp.print();
+    temp.GenerateRandCard();
+    temp.print();
 
     return 0;
 }

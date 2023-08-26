@@ -13,6 +13,7 @@ class Card{
     Card();
     char color;
     int num;
+    void printCard();
 
     private:
     

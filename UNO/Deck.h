@@ -13,6 +13,7 @@ class Deck {
     private:
         //int score;
         Card firstCard;
+        
 
     public:
           

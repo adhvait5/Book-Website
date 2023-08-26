@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <vector>
 
 #include "Deck.h"
 
@@ -15,6 +16,40 @@ int main()
     startGame();
     temp.GenerateRandCard();
     temp.print();
+
+    vector<Card> playerOne; 
+    vector<Card> playerTwo;
+
+    Card newCard; 
+    char letters[] = "BGRY";
+
+    for(int i = 0; i < 7; ++i){
+        newCard.num = rand() % 10;
+        newCard.color = letters[rand() % 4];
+        playerOne.push_back(newCard);
+    }
+
+    for(int i = 0; i < 7; ++i){
+        newCard.num = rand() % 10;
+        newCard.color = letters[rand() % 4];
+        playerTwo.push_back(newCard);
+    }
+
+   //test case
+   /* for(int i = 0; i < 7; ++i){
+       playerOne.at(i).printCard(); 
+    }
+
+    cout << endl; 
+
+    for(int i = 0; i < 7; ++i){
+       playerTwo.at(i).printCard(); 
+    }
+
+    */
+
+
+
 
     return 0;
 }

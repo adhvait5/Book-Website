@@ -12,21 +12,27 @@ void startGame();
 
 int main() 
 { 
+    /*
     Deck temp;
     startGame();
     temp.GenerateRandCard();
     temp.print();
-    char letters[] = "BGRY";
+    
+    */
 
+    char letters[] = "BGRY";
     Card deckCard;
     deckCard.num = rand() % 10;
     deckCard.color = letters[rand() % 4];
 
+    deckCard.printCard();
+    cout << endl; 
+
 
     vector<Card> playerOne; 
     vector<Card> playerTwo;
-    int playerOneScore;
-    int playerTwoScore;
+    int playerOneScore = 7;
+    int playerTwoScore = 7;
 
     Card newCard; 
     
@@ -35,14 +41,14 @@ int main()
         newCard.num = rand() % 10;
         newCard.color = letters[rand() % 4];
         playerOne.push_back(newCard);
-        playerOneScore++;
+        
     }
 
     for(int i = 0; i < 7; ++i){
         newCard.num = rand() % 10;
         newCard.color = letters[rand() % 4];
         playerTwo.push_back(newCard);
-        playerTwoScore++;
+        
     }
 
    //test case
@@ -65,7 +71,7 @@ int main()
        playerOne.at(i).printCard(); 
     }
 
-    cout < endl;
+    cout << endl;
 
     for(int i = 0; i < 7; ++i){
        cout << i << " "; 
@@ -87,16 +93,17 @@ int main()
                 deckCard = playerOne.at(i);
                 playerOne.erase(playerOne.begin()+i);
                 playerOneScore--;
+            }else{
+                newCard.num = rand() % 10;
+                newCard.color = letters[rand() % 4];
+                playerOne.push_back(newCard);
+                playerOneScore++;
             }
-        }else{
-            newCard.num = rand() % 10;
-            newCard.color = letters[rand() % 4];
-            playerOne.push_back(newCard);
-            playerOneScore++;
         }
     }
 
     deckCard.printCard();
+    cout <<endl;
 
     for(int i = 0; i < playerTwoScore; ++i){
        playerTwo.at(i).printCard(); 
@@ -118,23 +125,25 @@ int main()
         cin >> userInput; 
     }
 
+
     for(int i = 0; i <= userInput; ++i){
         if(i == userInput){
             if(playerTwo.at(i).color == deckCard.color && playerTwo.at(i).num == deckCard.num){
                 deckCard = playerTwo.at(i);
                 playerOne.erase(playerTwo.begin()+i);
                 playerTwoScore--;
+                //exit(1);
+            }else{
+                newCard.num = rand() % 10;
+                newCard.color = letters[rand() % 4];
+                playerTwo.push_back(newCard);
+                playerTwoScore++;
             }
-        }else{
-            newCard.num = rand() % 10;
-            newCard.color = letters[rand() % 4];
-            playerTwo.push_back(newCard);
-            playerTwoScore++;
         }
     }
 
 
-
+    cout << "got here" << endl; 
     
 
 
